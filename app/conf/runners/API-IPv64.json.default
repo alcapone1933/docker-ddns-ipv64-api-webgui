@@ -1,0 +1,68 @@
+{
+  "name": "API-IPv64",
+  "script_path": "/app/conf/scripts/api-script.sh",
+  "output_format": "terminal",
+  "parameters": [
+    {
+      "name": "Auswahl",
+      "required": true,
+      "type": "list",
+      "default": "get_account_info",
+      "constant": false,
+      "description": "get_account_info get_logs get_domains add_domain del_domain add_record add_record_praefix del_record\nget_domains_record_id-info",
+      "values": [
+        "get_account_info",
+        "get_logs",
+        "get_domains",
+        "add_domain",
+        "del_domain",
+        "add_record",
+        "add_record_praefix",
+        "get_domains_record_id-info",
+        "del_record"
+      ]
+    },
+    {
+      "name": "API",
+      "required": true,
+      "type": "text",
+      "default": "123456787654321234567876543",
+      "constant": true,
+      "secure": false
+    },
+    {
+      "name": "DOMAIN IPV64",
+      "required": true,
+      "type": "text",
+      "default": "deine-domain.ipv64.net",
+      "constant": false,
+      "description": "add_domain del_domain add_record add_record_praefix"
+    },
+    {
+      "name": "DOMAIN TYPE",
+      "type": "list",
+      "default": "A",
+      "description": "        - value: A\n        - value: AAAA\n        - value: TXT\n        - value: MX\n        - value: NS\n        - value: CNAME",
+      "values": [
+        "A",
+        "AAAA",
+        "TXT",
+        "MX",
+        "NS",
+        "CNAME"
+      ]
+    },
+    {
+      "name": "DOMAIN_CONTENT",
+      "default": "1.1.1.1"
+    },
+    {
+      "name": "DOMAIN_PRAEFIX",
+      "default": "sub-domain"
+    },
+    {
+      "name": " DOMAIN RECORD ID",
+      "default": "3469"
+    }
+  ]
+}
