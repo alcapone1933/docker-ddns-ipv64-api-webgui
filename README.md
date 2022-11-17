@@ -5,9 +5,9 @@
 [![Docker Pulls](https://shields.cosanostra-cloud.de/docker/pulls/alcapone1933/ddns-ipv64-api-webgui?logo=docker&logoColor=blue)](https://hub.docker.com/r/alcapone1933/ddns-ipv64-api-webgui/tags)
 ![Docker Image Version (latest semver)](https://shields.cosanostra-cloud.de/docker/v/alcapone1933/ddns-ipv64-api-webgui?sort=semver&logo=docker&logoColor=blue&label=dockerhub%20version)
 
-&nbsp;
-
 API DDNS IPV64.NET Web GUI https://ipv64.net/dyndns_updater_api.php
+
+Danke für die Unterstützung :pray: @[Serpensin](https://github.com/Serpensin) für das python script
 
 &nbsp;
 
