@@ -5,7 +5,7 @@
 # DOMAIN_CONTENT="1.1.1.1"
 # DOMAIN_PRAEFIX="sub-domain"
 # DOMAIN_RECORD_ID="3469"
-VERSION="v0.0.1"
+VERSION="v0.0.2"
 CURL_USER_AGENT="docker-ddns-ipv64-api-webgui/version=$VERSION github.com/alcapone1933/docker-ddns-ipv64-api-webgui"
 cmd_get_account_info() {
     DOMAIN_API="$2"
@@ -90,7 +90,7 @@ cmd_get_domains_record_id-info() {
 }
 cmd_del_record() {
     DOMAIN_API="$2"
-    DOMAIN_RECORD_ID="$7"
+    DOMAIN_RECORD_ID="$3"
     if [ -z "$DOMAIN_API" ] || [ -z "$DOMAIN_RECORD_ID" ]; then
         echo "Error: Not enough arguments"
         usage
@@ -108,8 +108,8 @@ case "$COMMAND" in
     del_domain) cmd_del_domain "$@" ;;
     add_record) cmd_add_record "$@" ;;
     add_record_praefix) cmd_add_record_praefix "$@" ;;
-    del_record) cmd_del_record "$@" ;;
     get_domains_record_id-info) cmd_get_domains_record_id-info "$@" ;;
+    del_record) cmd_del_record "$@" ;;
 esac
 
 exit 0

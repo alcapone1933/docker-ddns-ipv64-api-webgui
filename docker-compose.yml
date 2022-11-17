@@ -16,6 +16,6 @@ services:
       - TABELLE_BREITE=30
     volumes:
       - ./app/conf/conf.json:/app/conf/conf.json
-      # - ./app/runners/:/app/conf/runners
-      # - ./app/scripts/:/app/conf/scripts
-      # - ./app/logs/:/app/conf/scripts
+      # - ./app/conf/runners/:/app/conf/runners
+      # - ./app/conf/scripts/:/app/conf/scripts
+      # - ./app/logs/:/app/logs

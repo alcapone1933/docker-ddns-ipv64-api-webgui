@@ -9,7 +9,7 @@
       "type": "list",
       "default": "get_account_info",
       "constant": false,
-      "description": "get_account_info get_logs get_domains add_domain del_domain add_record add_record_praefix del_record\nget_domains_record_id-info",
+      "description": "Auswahl Api abfrage\n\n- get_account_info\n- get_logs\n- get_domains\n- add_domain\n- del_domain\n- add_record\n- add_record_praefix\n- get_domains_record_id-info\n- del_record",
       "values": [
         "get_account_info",
         "get_logs",
@@ -23,26 +23,26 @@
       ]
     },
     {
-      "name": "API",
+      "name": "API Key",
       "required": true,
       "type": "text",
       "default": "123456787654321234567876543",
-      "constant": true,
-      "secure": false
+      "constant": false,
+      "description": "Dein API Key\n\nBeispiel: 987654321098765432109876543\n\nF\u00fcr die Auwahl wichtig\n- get_account_info\n- get_logs\n- get_domains\n- add_domain\n- del_domain\n- add_record\n- add_record_praefix\n- get_domains_record_id-info\n- del_record",
+      "secure": true
     },
     {
       "name": "DOMAIN IPV64",
-      "required": true,
+      "required": false,
+      "same_arg_param": false,
       "type": "text",
-      "default": "deine-domain.ipv64.net",
       "constant": false,
-      "description": "add_domain del_domain add_record add_record_praefix"
+      "description": "Deine Domain\n\nBeispiel: deine-domain.ipv64.net\n\nF\u00fcr die Auwahl wichtig\n- add_domain\n- del_domain\n- add_record\n- add_record_praefix"
     },
     {
       "name": "DOMAIN TYPE",
       "type": "list",
-      "default": "A",
-      "description": "        - value: A\n        - value: AAAA\n        - value: TXT\n        - value: MX\n        - value: NS\n        - value: CNAME",
+      "description": "DOMAIN TYPE\n\nBeispiel: A\n\n- value: A\n- value: AAAA\n- value: TXT\n- value: MX\n- value: NS\n- value: CNAME\n\nF\u00fcr die Auwahl wichtig\n- add_record\n- add_record_praefix",
       "values": [
         "A",
         "AAAA",
@@ -54,15 +54,15 @@
     },
     {
       "name": "DOMAIN_CONTENT",
-      "default": "1.1.1.1"
+      "description": "Domain CONTENT (Ziel)\n\nBeispiel: 1.1.1.1\n\nF\u00fcr die Auwahl wichtig\n- add_record\n- add_record_praefix"
     },
     {
       "name": "DOMAIN_PRAEFIX",
-      "default": "sub-domain"
+      "description": "\nDOMAIN Pr\u00e4fix (sub-domain)\n\nBeispiel: sub-domain\n\nF\u00fcr die Auwahl wichtig\n- add_record_praefix"
     },
     {
       "name": " DOMAIN RECORD ID",
-      "default": "3469"
+      "description": "DOMAIN RECORD ID\n\nBeispiel: 3469\n\nF\u00fcr die Auwahl wichtig\n- del_record"
     }
   ]
 }

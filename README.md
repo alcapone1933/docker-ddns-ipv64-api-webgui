@@ -9,7 +9,11 @@ API DDNS IPV64.NET Web GUI https://ipv64.net/dyndns_updater_api.php
 
 Danke für die Unterstützung :pray: @[Serpensin](https://github.com/Serpensin) für das python script
 
-&nbsp;
+***
+
+<img src="img/demo.png" width="900" height="500"/>
+
+***
 
 ### Docker CLI
 
@@ -40,3 +44,38 @@ services:
       - DOMAIN_API=123456787654321234567876543
       - TABELLE_BREITE=30
 ```
+## Docs
+### [DynDNS API IPV64.NET Vorlage](/docs/api-ipv64-net.md)
+
+### [Docker API IPV64.NET Web Gui Vorlage](/docs/docker-api-vorlage.md)
+
+
+## Ports
+
+| Name        | Value   | Example    |
+| ----------- | ------- | ---------- |
+| Web Port    | 5000    | 5000:5000  |
+
+* * *
+
+## Volume Parameter
+
+| Name (Beschreibung) #Optional  | Wert    | Standard                 |
+| -----------------------------  | ------- | ------------------------ |
+| Speicherort app                | volume  | data:/app                |
+| Speicherort app conf           | volume  | data:/app/conf/conf.json |
+| Speicherort app Script Runners | volume  | data:/app/conf/runners   |
+| Speicherort app Script         | volume  | data:/app/conf/scripts   |
+| Speicherort app logs           | volume  | data:/logs               |
+
+* * *
+
+&nbsp;
+
+## Env Parameter
+
+| Name (Beschreibung)                                                             | Wert           | Standard      | Beispiel                    |
+| ------------------------------------------------------------------------------- | -------------- | ------------- | --------------------------- |
+| Zeitzone                                                                        | TZ             | Europe/Berlin | Europe/Berlin               |
+| DOMAIN API: Deinr Domain DOMAIN API zu fiden unter https://ipv64.net/dyndns.php | DOMAIN_API     | ------------- | 123456787654321234567876543 |
+| TABELLE BREITE: Tabellen Breite für die Ausgabe  **get_domains_record_id-info** | TABELLE_BREITE | 30            | 30                          |
