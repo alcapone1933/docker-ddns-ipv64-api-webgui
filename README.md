@@ -45,9 +45,9 @@ services:
       - TABELLE_BREITE=30
 ```
 ## Docs
-### [DynDNS API IPV64.NET Vorlage](/docs/api-ipv64-net.md)
+### [DynDNS API IPV64.NET Vorlage](docs/api-ipv64-net.md)
 
-### [Docker API IPV64.NET Web Gui Vorlage](/docs/docker-api-vorlage.md)
+### [Docker API IPV64.NET Web Gui Vorlage](docs/docker-api-vorlage.md)
 
 
 ## Ports

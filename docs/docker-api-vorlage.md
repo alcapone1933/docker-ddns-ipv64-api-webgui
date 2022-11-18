@@ -225,7 +225,7 @@ Schau dir Die Volage der API Beispiele [DynDNS API IPV64.NET Vorlage](/docs/api-
 <img src="../img/get_domains_record_id-info.png" width="1400" height="150">
 
 #### AUSGABE
-```json
+```txt
 +----------------------------+-------+------------+--------------------+-----+---------------------+-----------+
 |           Domain           |  Type |   Prefix   |      Content       | TTL |     Last Update     | Record ID |
 +----------------------------+-------+------------+--------------------+-----+---------------------+-----------+
