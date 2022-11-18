@@ -75,7 +75,7 @@ services:
 ## Env Parameter
 
 | Name (Beschreibung)                                                             | Wert           | Standard      | Beispiel                    |
-| ------------------------------------------------------------------------------- | -------------- | ------------- | --------------------------- |
+| ------------------ ------------------------------------------------------------ | -------------- | ------------- | --------------------------- |
 | Zeitzone                                                                        | TZ             | Europe/Berlin | Europe/Berlin               |
-| DOMAIN API: Deinr Domain DOMAIN API zu fiden unter https://ipv64.net/dyndns.php | DOMAIN_API     | ------------- | 123456787654321234567876543 |
+| DOMAIN API: Deine DOMAIN API zu fiden unter https://ipv64.net/dyndns.php        | DOMAIN_API     | ------------- | 123456787654321234567876543 |
 | TABELLE BREITE: Tabellen Breite für die Ausgabe  **get_domains_record_id-info** | TABELLE_BREITE | 30            | 30                          |
