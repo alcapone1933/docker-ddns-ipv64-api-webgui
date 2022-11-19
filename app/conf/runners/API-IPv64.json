@@ -42,13 +42,14 @@
     {
       "name": "DOMAIN TYPE",
       "type": "list",
-      "description": "DOMAIN TYPE\n\nBeispiel: A\n\n- value: A\n- value: AAAA\n- value: TXT\n- value: MX\n- value: NS\n- value: CNAME\n\nF\u00fcr die Auwahl wichtig\n- add_record\n- add_record_praefix",
+      "description": "DOMAIN TYPE\n\nBeispiel: A\n\n- value: A\n- value: AAAA\n- value: TXT\n- value: MX\n- value: NS\n- value: SRV\n- value: CNAME\n\nF\u00fcr die Auwahl wichtig\n- add_record\n- add_record_praefix",
       "values": [
         "A",
         "AAAA",
         "TXT",
         "MX",
         "NS",
+        "SRV",
         "CNAME"
       ]
     },

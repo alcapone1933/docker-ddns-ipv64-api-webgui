@@ -62,7 +62,7 @@ Domain wird mit allen bekannten DNS-Records unverzüglich gelöscht.
 
 [POST] add_record => Domainnamen [String Format: domainname.ipv6.net] \
 [POST] praefix => Domainpraefix [String Format] \
-[POST] type => A,AAAA,CNAME,MX,NS [String Format] \
+[POST] type => A,AAAA,CNAME,MX,SRV,NS [String Format] \
 [POST] content => Inhalt für den DNS Record. [String Format] \
 Ein neuer DNS-Record wird in der angegebenen Domain angelegt.
 
