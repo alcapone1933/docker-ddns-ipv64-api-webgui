@@ -6,16 +6,16 @@ Schau dir Die Volage der API Beispiele [DynDNS API IPV64.NET Vorlage](/docs/api-
 
 # Auswahl Api abfrage
 
-## Auswahl Übersicht
-- get_account_info = [GET] API Account Informations
-- get_logs = [GET] API Account Logging
-- get_domains = [GET] API Domain Informations
-- add_domain = [POST] API Domain erstellen
-- del_domain = [DELETE] API Domain löschen
-- add_record = [POST] API DNS Record hinzufügen OHNE PRAEFIX
-- add_record_praefix = [POST] API DNS Record hinzufügen MIT PRAEFIX
-- get_domains_record_id-info = [GET] API Domain Für Record ID
-- del_record = [DELETE] API DNS Record löschen
+- Auswahl Übersicht
+  - [get_account_info = [GET] API Account Informations](#auswahl-api-abfrage-get_account_info)
+  - [get_logs = [GET] API Account Logging](#auswahl-api-abfrage-get_logs)
+  - [get_domains = [GET] API Domain Informations](#auswahl-api-abfrage-get_domains)
+  - [add_domain = [POST] API Domain erstellen](#auswahl-api-abfrage-add_domain)
+  - [del_domain = [DELETE] API Domain löschen](#auswahl-api-abfrage-del_domain)
+  - [add_record = [POST] API DNS Record hinzufügen OHNE PRAEFIX](#auswahl-api-abfrage-add_record)
+  - [add_record_praefix = [POST] API DNS Record hinzufügen MIT PRAEFIX](#auswahl-api-abfrage-add_record_praefix)
+  - [get_domains_record_id-info = [GET] API Domain Für Record ID](#auswahl-api-abfrage-get_domains_record_id-info)
+  - [del_record = [DELETE] API DNS Record löschen](#auswahl-api-abfrage-del_record)
 
 | Auswahl                       | API Key                     | DOMAIN IPV64            | DOMAIN TYPE | DOMAIN_CONTENT | DOMAIN_PRAEFIX | DOMAIN RECORD ID |
 | ----------------------------- | --------------------------- | ----------------------- | ----------- | -------------- | -------------- | ---------------- |
@@ -238,7 +238,7 @@ Schau dir Die Volage der API Beispiele [DynDNS API IPV64.NET Vorlage](/docs/api-
 
 ***
 
-### Auswahl Api abfrage**del_record**
+### Auswahl Api abfrage **del_record**
 - del_record = [DELETE] API DNS Record löschen
 
 | Auswahl                       | API Key                     | DOMAIN IPV64            | DOMAIN TYPE | DOMAIN_CONTENT | DOMAIN_PRAEFIX | DOMAIN RECORD ID |
