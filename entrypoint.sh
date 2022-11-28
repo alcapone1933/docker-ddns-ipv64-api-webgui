@@ -12,7 +12,7 @@ trap 'cleanup' SIGTERM
 sleep 2
 echo "===================================== START DDNS API GUI  ====================================="
 if ! curl -sSL --fail https://ipv64.net/ > /dev/null; then
-    echo "$DATUM  FEHLER !!!  - 404 Sie haben kein Netzwerk oder Internetzugang"
+    echo "$DATUM  FEHLER !!!  - 404 Sie haben kein Netzwerk oder Internetzugang oder die Webseite ipv64.net ist nicht erreichbar"
 	exit 0
 fi
 cp /app/conf/runners/API-IPv64.json.default /app/conf/runners/API-IPv64.json
