@@ -9,7 +9,7 @@
       "type": "list",
       "default": "get_account_info",
       "constant": false,
-      "description": "Auswahl Api abfrage\n\n- get_account_info\n- get_logs\n- get_domains\n- add_domain\n- del_domain\n- add_record\n- add_record_praefix\n- get_domains_record_id-info\n- del_record",
+      "description": "Auswahl Api abfrage\n\n- get_account_info\n- get_logs\n- get_domains\n- add_domain\n- del_domain\n- add_record\n- add_record_praefix\n- get_domains_record_id-info\n- del_record\n- del_record_id",
       "values": [
         "get_account_info",
         "get_logs",
@@ -19,7 +19,8 @@
         "add_record",
         "add_record_praefix",
         "get_domains_record_id-info",
-        "del_record"
+        "del_record",
+        "del_record_id"
       ]
     },
     {
@@ -28,7 +29,7 @@
       "type": "text",
       "default": "123456787654321234567876543",
       "constant": false,
-      "description": "Dein API Key\n\nBeispiel: 987654321098765432109876543\n\nF\u00fcr die Auwahl wichtig\n- get_account_info\n- get_logs\n- get_domains\n- add_domain\n- del_domain\n- add_record\n- add_record_praefix\n- get_domains_record_id-info\n- del_record",
+      "description": "Dein API Key\n\nBeispiel: 987654321098765432109876543\n\nF\u00fcr die Auwahl wichtig\n- get_account_info\n- get_logs\n- get_domains\n- add_domain\n- del_domain\n- add_record\n- add_record_praefix\n- get_domains_record_id-info\n- del_record\n- del_record_id",
       "secure": true
     },
     {
@@ -37,12 +38,12 @@
       "same_arg_param": false,
       "type": "text",
       "constant": false,
-      "description": "Deine Domain\n\nBeispiel: deine-domain.ipv64.net\n\nF\u00fcr die Auwahl wichtig\n- add_domain\n- del_domain\n- add_record\n- add_record_praefix"
+      "description": "Deine Domain\n\nBeispiel: deine-domain.ipv64.net\n\nF\u00fcr die Auwahl wichtig\n- add_domain\n- del_domain\n- add_record\n- add_record_praefix\n- get_domains_record_id-info\n- del_record"
     },
     {
       "name": "DOMAIN TYPE",
       "type": "list",
-      "description": "DOMAIN TYPE\n\nBeispiel: A\n\n- value: A\n- value: AAAA\n- value: TXT\n- value: MX\n- value: NS\n- value: SRV\n- value: CNAME\n\nF\u00fcr die Auwahl wichtig\n- add_record\n- add_record_praefix",
+      "description": "DOMAIN TYPE\n\nBeispiel: A\n\n- value: A\n- value: AAAA\n- value: TXT\n- value: MX\n- value: NS\n- value: SRV\n- value: CNAME\n\nF\u00fcr die Auwahl wichtig\n- add_record\n- add_record_praefix\n- del_record",
       "values": [
         "A",
         "AAAA",
@@ -55,15 +56,15 @@
     },
     {
       "name": "DOMAIN_CONTENT",
-      "description": "Domain CONTENT (Ziel)\n\nBeispiel: 1.1.1.1\n\nF\u00fcr die Auwahl wichtig\n- add_record\n- add_record_praefix"
+      "description": "Domain CONTENT (Ziel)\n\nBeispiel: 1.1.1.1\n\nF\u00fcr die Auwahl wichtig\n- add_record\n- add_record_praefix\n- del_record"
     },
     {
       "name": "DOMAIN_PRAEFIX",
-      "description": "\nDOMAIN Pr\u00e4fix (sub-domain)\n\nBeispiel: sub-domain\n\nF\u00fcr die Auwahl wichtig\n- add_record_praefix"
+      "description": "\nDOMAIN Pr\u00e4fix (sub-domain)\n\nBeispiel: sub-domain\n\nF\u00fcr die Auwahl wichtig\n- add_record_praefix\n- del_record"
     },
     {
       "name": " DOMAIN RECORD ID",
-      "description": "DOMAIN RECORD ID\n\nBeispiel: 3469\n\nF\u00fcr die Auwahl wichtig\n- del_record"
+      "description": "DOMAIN RECORD ID\n\nBeispiel: 3469\n\nF\u00fcr die Auwahl wichtig\n- del_record_id"
     }
   ]
 }

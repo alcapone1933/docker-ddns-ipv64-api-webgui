@@ -29,7 +29,7 @@ def search_entry(ent):
                 for subdomain in ent[key].keys():
                     x.field_names =  ['Domain', 'Type', 'Praefix', 'Content', 'TTL', 'Last Update', 'Record ID']
                     build_table(ent, key, subdomain)
-                x.max_width = int(breite)                   
+                x.max_width = int(breite)
                 x.sortby = 'Domain'
                 print(x)
             else:
@@ -42,8 +42,8 @@ def search_entry(ent):
                             exit()
                 else:
                     exit('Domain not found')
-                                         
-                        
+
+
 load_dotenv()
 try:
     search = argv[2]
@@ -55,14 +55,12 @@ except:
     exit("No API Key given")
 agent = os.getenv('CURL_USER_AGENT')
 if agent == '':
-    agent = './𝕾𝖊𝖗𝖕𝖊𝖓𝖘𝖎𝖓.𝖘𝖍#0007 on Discord. Github: https://github.com/Serpensin'
-
+    agent = 'Discord: Alcapone1933#0041'
 
 breite = os.getenv('TABELLE_BREITE')
 if breite is None:
     breite = 30
-    
-    
+
 headers = {
   'Authorization': f'Bearer {api_key}',
   'User-Agent': agent,
@@ -71,7 +69,6 @@ headers = {
 response = r.request("GET", "https://ipv64.net/api.php?get_domains", headers=headers)
 if response.status_code != 200:
     exit("API Key not valid")
-    
 
 x = PrettyTable()
 search_entry(json.loads(response.text))
