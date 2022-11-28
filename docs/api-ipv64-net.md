@@ -72,7 +72,7 @@ Ein neuer DNS-Record wird in der angegebenen Domain angelegt.
 [DELETE] praefix => Domainpraefix [String Format] \
 [DELETE] type => A,AAAA,TXT,MX,NS,SRV,CNAME [String Format] \
 [DELETE] content => Inhalt für den DNS Record. [String Format] \
-ODER
+ODER \
 [DELETE] del_record => DNS Record ID [Integer Format] \
 Der DNS-Record wird unverzüglich aus der Domain gelöscht.
 
@@ -166,7 +166,7 @@ Beispieloption 2-b: `curl -X DELETE https://ipv64.net/api.php -H "Authorization:
 
 #### ODER
 
-[DELETE] del_record => 3469 \
+[DELETE] del_record => 3469
 
 Liste Dir alle Domains auf:
 
