@@ -27,7 +27,7 @@ def search_entry(ent):
         if key == 'subdomains':
             if search == '':
                 for subdomain in ent[key].keys():
-                    x.field_names =  ['Domain', 'Type', 'Prefix', 'Content', 'TTL', 'Last Update', 'Record ID']
+                    x.field_names =  ['Domain', 'Type', 'Praefix', 'Content', 'TTL', 'Last Update', 'Record ID']
                     build_table(ent, key, subdomain)
                 x.max_width = int(breite)                   
                 x.sortby = 'Domain'
@@ -36,7 +36,7 @@ def search_entry(ent):
                 if search in ent[key].keys():
                     for subdomain in ent[key].keys():
                         if subdomain == search:
-                            x.field_names =  ['Domain', 'Type', 'Prefix', 'Content', 'TTL', 'Last Update', 'Record ID']
+                            x.field_names =  ['Domain', 'Type', 'Praefix', 'Content', 'TTL', 'Last Update', 'Record ID']
                             build_table(ent, key, subdomain)
                             print(x)
                             exit()

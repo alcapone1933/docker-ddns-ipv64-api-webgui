@@ -50,24 +50,29 @@ Erhalte alle Informationen bezüglich der Domains und Records zurück.
 
 ### [POST] Domain erstellen (form-data)
 
-[POST] add_domain => Domainnamen [String Format: domainname.ipv6.net] \
+[POST] add_domain => Domainnamen [String Format: domainname.ipv64.net] \
 Erstellt eine neue Domain und erstellt automatisch A o. AAAA Record.
 
 ### [DELETE] Domain löschen (x-www-form-urlencoded)
 
-[DELETE] del_domain => Domainnamen [String Format: domainname.ipv6.net] \
+[DELETE] del_domain => Domainnamen [String Format: domainname.ipv64.net] \
 Domain wird mit allen bekannten DNS-Records unverzüglich gelöscht.
 
 ### [POST] DNS Record hinzufügen (form-data)
 
-[POST] add_record => Domainnamen [String Format: domainname.ipv6.net] \
+[POST] add_record => Domainnamen [String Format: domainname.ipv64.net] \
 [POST] praefix => Domainpraefix [String Format] \
-[POST] type => A,AAAA,CNAME,MX,SRV,NS [String Format] \
+[POST] type => A,AAAA,TXT,MX,NS,SRV,CNAME [String Format] \
 [POST] content => Inhalt für den DNS Record. [String Format] \
 Ein neuer DNS-Record wird in der angegebenen Domain angelegt.
 
 ### [DELETE] DNS Record löschen (form-data)
 
+[DELETE] del_record => Domainnamen [String Format: domainname.ipv64.net] \
+[DELETE] praefix => Domainpraefix [String Format] \
+[DELETE] type => A,AAAA,TXT,MX,NS,SRV,CNAME [String Format] \
+[DELETE] content => Inhalt für den DNS Record. [String Format] \
+ODER \
 [DELETE] del_record => DNS Record ID [Integer Format] \
 Der DNS-Record wird unverzüglich aus der Domain gelöscht.
 
@@ -122,19 +127,46 @@ Beispieloption 2-b: `curl -X DELETE https://ipv64.net/api.php -H "Authorization:
 ### [POST] API  DNS Record hinzufügen (form-data): **add_record**
 
 [POST] add_record => deine-domain.ipv64.net \
-[POST] praefix => Domainpraefix \
 [POST] type => CNAME \
-[POST] content => schroederdennis.de \
-Ein neuer DNS-Record wird in der angegebenen Domain angelegt.
+[POST] content => schroederdennis.de
 
 Beispieloption 1:   `curl -X POST https://ipv64.net/api.php -H "Authorization: Bearer 123456787654321234567876543" -d "add_record=deine-domain.ipv64.net" -d "type=CNAME" -d "content=schroederdennis.de"` \
 Beispieloption 2-a: `curl -X POST https://ipv64.net/api.php -H "Authorization: Basic bm9uZToxMjM0NTY3ODc2NTQzMjEyMzQ1Njc4NzY1NDM=" -d "add_record=deine-domain.ipv64.net" -d "type=CNAME" -d "content=schroederdennis.de"` \
 Beispieloption 2-b: `curl -X POST https://ipv64.net/api.php -H "Authorization: Basic $(echo -n none:123456787654321234567876543 | base64)" -d "add_record=deine-domain.ipv64.net" -d "type=CNAME" -d "content=schroederdennis.de"`
 
+[POST] add_record => deine-domain.ipv64.net \
+[POST] praefix => ddns \
+[POST] type => A \
+[POST] content => 46.4.79.135
+
+Beispieloption 1:   `curl -X POST https://ipv64.net/api.php -H "Authorization: Bearer 123456787654321234567876543" -d "add_record=deine-domain.ipv64.net" -d "praefix=ddns" -d "type=A" -d "content=46.4.79.135"` \
+Beispieloption 2-a: `curl -X POST https://ipv64.net/api.php -H "Authorization: Basic bm9uZToxMjM0NTY3ODc2NTQzMjEyMzQ1Njc4NzY1NDM=" -d "add_record=deine-domain.ipv64.net" -d "praefix=ddns" -d "type=A" -d "content=46.4.79.135"` \
+Beispieloption 2-b: `curl -X POST https://ipv64.net/api.php -H "Authorization: Basic $(echo -n none:123456787654321234567876543 | base64)" -d "add_record=deine-domain.ipv64.net" -d "praefix=ddns" -d "type=A" -d "content=46.4.79.135"`
+
+
+
 ### [DELETE] API DNS Record löschen (form-data): **del_record**
 
-[DELETE] del_record => 3469 \
-Der DNS-Record wird unverzüglich aus der Domain gelöscht.
+[DELETE] del_record => deine-domain.ipv64.net \
+[DELETE] type => CNAME \
+[DELETE] content => schroederdennis.de
+
+Beispieloption 1:   `curl -X DELETE https://ipv64.net/api.php -H "Authorization: Bearer 123456787654321234567876543" -d "del_record=deine-domain.ipv64.net" -d "type=CNAME" -d "content=schroederdennis.de"` \
+Beispieloption 2-a: `curl -X DELETE https://ipv64.net/api.php -H "Authorization: Basic bm9uZToxMjM0NTY3ODc2NTQzMjEyMzQ1Njc4NzY1NDM=" -d "del_record=deine-domain.ipv64.net" -d "type=CNAME" -d "content=schroederdennis.de"` \
+Beispieloption 2-b: `curl -X DELETE https://ipv64.net/api.php -H "Authorization: Basic $(echo -n none:123456787654321234567876543 | base64)" -d "del_record=deine-domain.ipv64.net" -d "type=CNAME" -d "content=schroederdennis.de"`
+
+[DELETE] del_record => deine-domain.ipv64.net \
+[DELETE] praefix => ddns \
+[DELETE] type => A \
+[DELETE] content => 46.4.79.135
+
+Beispieloption 1:   `curl -X DELETE https://ipv64.net/api.php -H "Authorization: Bearer 123456787654321234567876543" -d "del_record=deine-domain.ipv64.net" -d "praefix=ddns" -d "type=A" -d "content=46.4.79.135"` \
+Beispieloption 2-a: `curl -X DELETE https://ipv64.net/api.php -H "Authorization: Basic bm9uZToxMjM0NTY3ODc2NTQzMjEyMzQ1Njc4NzY1NDM=" -d "del_record=deine-domain.ipv64.net" -d "praefix=ddns" -d "type=A" -d "content=46.4.79.135"` \
+Beispieloption 2-b: `curl -X DELETE https://ipv64.net/api.php -H "Authorization: Basic $(echo -n none:123456787654321234567876543 | base64)" -d "del_record=deine-domain.ipv64.net" -d "praefix=ddns" -d "type=A" -d "content=46.4.79.135"`
+
+#### ODER
+
+[DELETE] del_record => 3469
 
 Liste Dir alle Domains auf:
 
