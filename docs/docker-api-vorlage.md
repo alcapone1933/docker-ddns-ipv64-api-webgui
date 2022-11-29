@@ -1,7 +1,7 @@
 # Docker DDNS IPV64.NET API Web Gui Vorlage
 
 
-Schau dir Die Volage der API Beispiele [DynDNS API IPV64.NET Vorlage](/docs/api-ipv64-net.md#api-beispiele) um meine Web Gui Vorlage zu verstehen
+Schau dir Die Volage der API Beispiele [DynDNS API IPV64.NET Vorlage](./api-ipv64-net.md#api-beispiele) um meine Web Gui Vorlage zu verstehen
 
 
 # Auswahl Api abfrage
