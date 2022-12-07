@@ -62,7 +62,7 @@ Domain wird mit allen bekannten DNS-Records unverzüglich gelöscht.
 
 [POST] add_record => Domainnamen [String Format: domainname.ipv64.net] \
 [POST] praefix => Domainpraefix [String Format] \
-[POST] type => A,AAAA,TXT,MX,NS,SRV,CNAME [String Format] \
+[POST] type => A,AAAA,TXT,MX,NS,SRV,CNAME,TLSA,CAA [String Format] \
 [POST] content => Inhalt für den DNS Record. [String Format] \
 Ein neuer DNS-Record wird in der angegebenen Domain angelegt.
 
@@ -70,7 +70,7 @@ Ein neuer DNS-Record wird in der angegebenen Domain angelegt.
 
 [DELETE] del_record => Domainnamen [String Format: domainname.ipv64.net] \
 [DELETE] praefix => Domainpraefix [String Format] \
-[DELETE] type => A,AAAA,TXT,MX,NS,SRV,CNAME [String Format] \
+[DELETE] type => A,AAAA,TXT,MX,NS,SRV,CNAME,TLSA,CAA [String Format] \
 [DELETE] content => Inhalt für den DNS Record. [String Format] \
 ODER \
 [DELETE] del_record => DNS Record ID [Integer Format] \
