@@ -35,7 +35,6 @@
     {
       "name": "DOMAIN IPV64",
       "required": false,
-      "same_arg_param": false,
       "type": "text",
       "constant": false,
       "description": "Deine Domain\n\nBeispiel: deine-domain.ipv64.net\n\nF\u00fcr die Auwahl wichtig\n- add_domain\n- del_domain\n- add_record\n- add_record_praefix\n- get_domains_record_id-info\n- del_record"
@@ -43,7 +42,7 @@
     {
       "name": "DOMAIN TYPE",
       "type": "list",
-      "description": "DOMAIN TYPE\n\nBeispiel: A\n\n- value: A\n- value: AAAA\n- value: TXT\n- value: MX\n- value: NS\n- value: SRV\n- value: CNAME\n\nF\u00fcr die Auwahl wichtig\n- add_record\n- add_record_praefix\n- del_record",
+      "description": "DOMAIN TYPE\n\nBeispiel: A\n\n- value: A\n- value: AAAA\n- value: TXT\n- value: MX\n- value: NS\n- value: SRV\n- value: CNAME\n- value: TLSA\n- value: CAA\n\nF\u00fcr die Auwahl wichtig\n- add_record\n- add_record_praefix\n- del_record",
       "values": [
         "A",
         "AAAA",
@@ -51,7 +50,9 @@
         "MX",
         "NS",
         "SRV",
-        "CNAME"
+        "CNAME",
+        "TLSA",
+        "CAA"
       ]
     },
     {
