@@ -1,0 +1,58 @@
+{
+  "name": "DNS UTILS (dig)",
+  "script_path": "/app/conf/scripts/dns-utils.sh",
+  "output_format": "terminal",
+  "parameters": [
+    {
+      "name": "DOMAIN",
+      "required": true,
+      "type": "text",
+      "default": "ipv64.net",
+      "description": "DOMAIN\n\nDeine Domain",
+      "env_var": "DOMAIN"
+    },
+    {
+      "name": "OPTION",
+      "type": "list",
+      "constant": false,
+      "description": "OPTION\n\n- value: +short\n- value: +noall +answer",
+      "values": [
+        "+short",
+        "+noall +answer"
+      ],
+      "env_var": "OPTION"
+    },
+    {
+      "name": "DOMAIN TYPE",
+      "type": "list",
+      "description": "DOMAIN TYPE\n\nBeispiel: A\n\n- value: ANY        (alle Eintr\u00e4ge)\n- value: A             (IPv4 Record eines Hosts)\n- value: AAAA      (IPv6 Record eines Hosts)\n- value: CNAME   (Kanonischer Name, Zuordnung von Aliassen)\n- value: MX          (Mail Exchanger)\n- value: NS           (Hostname eines autoritativen Nameservers)\n- value: PTR          (Domain Name Pointer um IP-Adressen Namen zuzuweisen)\n- value: SOA         (Start of Authority)\n- value: SRV          (Angebotene Dienste)\n- value: TXT          (Beliebiger Text)\n",
+      "values": [
+        "ANY",
+        "A",
+        "AAAA",
+        "CNAME",
+        "MX",
+        "NS",
+        "PTR",
+        "SOA",
+        "SRV",
+        "TXT"
+      ],
+      "env_var": "DOMAIN_TYPE"
+    },
+    {
+      "name": "DNS SERVER",
+      "required": true,
+      "type": "list",
+      "default": "@ns1.ipv64.net",
+      "description": "DNS NAMES\n\n- value: @ns1.ipv64.net\n- value: @ns2.ipv64.net\n- value: @1.1.1.1\n- value: @8.8.8.8",
+      "values": [
+        "@ns1.ipv64.net",
+        "@ns2.ipv64.net",
+        "@1.1.1.1",
+        "@8.8.8.8"
+      ],
+      "env_var": "DNS_SERVER"
+    }
+  ]
+}

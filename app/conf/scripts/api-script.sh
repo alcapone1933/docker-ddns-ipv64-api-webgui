@@ -5,7 +5,7 @@
 # DOMAIN_CONTENT="1.1.1.1"
 # DOMAIN_PRAEFIX="sub-domain"
 # DOMAIN_RECORD_ID="3469"
-VERSION="v0.0.4"
+VERSION="v0.0.5"
 CURL_USER_AGENT="docker-ddns-ipv64-api-webgui/version=$VERSION github.com/alcapone1933/docker-ddns-ipv64-api-webgui"
 cmd_get_account_info() {
     DOMAIN_API="$DOMAIN_API"

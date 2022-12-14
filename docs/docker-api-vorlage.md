@@ -3,20 +3,32 @@
 
 Schau dir Die Volage der API Beispiele [DynDNS API IPV64.NET Vorlage](./api-ipv64-net.md#api-beispiele) um meine Web Gui Vorlage zu verstehen
 
+# MENU 
+  - [API-IPv64](#api-ipv64)
+    ### [Auswahl Übersicht](#auswahl-api-abfrage)
+    - [get_account_info = [GET] API Account Informations](#auswahl-api-abfrage-get_account_info)
+    - [get_logs = [GET] API Account Logging](#auswahl-api-abfrage-get_logs)
+    - [get_domains = [GET] API Domain Informations](#auswahl-api-abfrage-get_domains)
+    - [add_domain = [POST] API Domain erstellen](#auswahl-api-abfrage-add_domain)
+    - [del_domain = [DELETE] API Domain löschen](#auswahl-api-abfrage-del_domain)
+    - [add_record = [POST] API DNS Record hinzufügen OHNE PRAEFIX](#auswahl-api-abfrage-add_record)
+    - [add_record_praefix = [POST] API DNS Record hinzufügen MIT PRAEFIX](#auswahl-api-abfrage-add_record_praefix)
+    - [get_domains_record_id-info = [GET] API Domain Für Record ID](#auswahl-api-abfrage-get_domains_record_id-info)
+    - [del_record = [DELETE] API DNS Record löschen](#auswahl-api-abfrage-del_record)
+    - [del_record_id = [DELETE] API DNS Record löschen](#auswahl-api-abfrage-del_record_id)
 
-# Auswahl Api abfrage
+  - [DNS-UTILS](#dns-utils)
+    ### [Auswahl Übersicht](#auswahl-dns-utils)
+    - [DOMAIN](#auswahl-domain)
+    - [OPTION](#auswahl-option)
+    - [DOMAIN TYPE](#auswahl-domain-type)
+    - [DNS SERVER](#auswahl-dns-server)
 
-- Auswahl Übersicht
-  - [get_account_info = [GET] API Account Informations](#auswahl-api-abfrage-get_account_info)
-  - [get_logs = [GET] API Account Logging](#auswahl-api-abfrage-get_logs)
-  - [get_domains = [GET] API Domain Informations](#auswahl-api-abfrage-get_domains)
-  - [add_domain = [POST] API Domain erstellen](#auswahl-api-abfrage-add_domain)
-  - [del_domain = [DELETE] API Domain löschen](#auswahl-api-abfrage-del_domain)
-  - [add_record = [POST] API DNS Record hinzufügen OHNE PRAEFIX](#auswahl-api-abfrage-add_record)
-  - [add_record_praefix = [POST] API DNS Record hinzufügen MIT PRAEFIX](#auswahl-api-abfrage-add_record_praefix)
-  - [get_domains_record_id-info = [GET] API Domain Für Record ID](#auswahl-api-abfrage-get_domains_record_id-info)
-  - [del_record = [DELETE] API DNS Record löschen](#auswahl-api-abfrage-del_record)
-  - [del_record_id = [DELETE] API DNS Record löschen](#auswahl-api-abfrage-del_record_id)
+&nbsp;
+
+## API-IPv64
+
+### Auswahl Api abfrage
 
 | Auswahl                       | API Key                     | DOMAIN IPV64            | DOMAIN TYPE | DOMAIN_CONTENT | DOMAIN_PRAEFIX | DOMAIN RECORD ID |
 | ----------------------------- | --------------------------- | ----------------------- | ----------- | -------------- | -------------- | ---------------- |
@@ -288,3 +300,54 @@ Schau dir Die Volage der API Beispiele [DynDNS API IPV64.NET Vorlage](./api-ipv6
   "del_record": "del_record"
 }
 ```
+
+***
+
+&nbsp;
+
+## DNS UTILS
+
+<img src="../img/dns-utils.png" width="1400" height="150">
+
+
+### Auswahl DNS UTILS
+
+| DOMAIN    | OPTION         | DOMAIN TYPE | DNS SERVER     |
+| --------- | -------------- | ----------- | -------------- |
+| ipv64.net | -------------- | ----------- | @ns1.ipv64.net |
+| ipv64.net | -------------- | ANY         | @ns1.ipv64.net |
+| ipv64.net | -------------- | A           | @ns1.ipv64.net |
+| _________ | ______________ | ___________ | ______________ |
+| ipv64.net | +short         | A           | @ns1.ipv64.net |
+| _________ | ______________ | ___________ | ______________ |
+| ipv64.net | +noall +answer | A           | @ns1.ipv64.net |
+
+
+### Auswahl DOMAIN
+
+Eine Domain
+
+### Auswahl OPTION
+
+- value: +short
+- value: +noall +answer
+
+### Auswahl DOMAIN TYPE
+
+- value: ANY        (alle Einträge)
+- value: A          (IPv4 Record eines Hosts)
+- value: AAAA       (IPv6 Record eines Hosts)
+- value: CNAME      (Kanonischer Name, Zuordnung von Aliassen)
+- value: MX         (Mail Exchanger)
+- value: NS         (Hostname eines autoritativen Nameservers)
+- value: PTR        (Domain Name Pointer um IP-Adressen Namen zuzuweisen)
+- value: SOA        (Start of Authority)
+- value: SRV        (Angebotene Dienste)
+- value: TXT        (Beliebiger Text)
+
+### Auswahl DNS SERVER
+
+- value: @ns1.ipv64.net
+- value: @ns2.ipv64.net
+- value: @1.1.1.1
+- value: @8.8.8.8
