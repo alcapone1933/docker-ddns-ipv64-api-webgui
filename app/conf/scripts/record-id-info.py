@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-# 2022-11-17
+# 2022-12-23
 # Creator by = Discord: ./𝕾𝖊𝖗𝖕𝖊𝖓𝖘𝖎𝖓.𝖘𝖍#0007 Github: https://github.com/Serpensin
 
 # This python script checks record id per api calls on ipv64.net
 # requirements = prettytable,requests,python-dotenv
 
 import requests as r
-from sys import argv, exit
+from sys import exit
 from dotenv import load_dotenv
 import os
 import json
@@ -42,33 +42,27 @@ def search_entry(ent):
                             exit()
                 else:
                     exit('Domain not found')
-
-
+                                         
+                        
 load_dotenv()
-try:
-    search = argv[2]
-except:
-    search = ''
-try:
-    api_key = argv[1]
-except:
-    exit("No API Key given")
+search = os.getenv('DOMAIN_IPV64')
+api_key = os.getenv('DOMAIN_API')
+breite = os.getenv('TABELLE_BREITE')
 agent = os.getenv('CURL_USER_AGENT')
 if agent == '':
-    agent = 'Discord: Alcapone1933#0041'
-
-breite = os.getenv('TABELLE_BREITE')
+    agent = './𝕾𝖊𝖗𝖕𝖊𝖓𝖘𝖎𝖓.𝖘𝖍#0007 on Discord. Github: https://github.com/Serpensin'
 if breite is None:
     breite = 30
 
 headers = {
   'Authorization': f'Bearer {api_key}',
-  'User-Agent': agent,
+  'User-Agent': agent
 }
 
 response = r.request("GET", "https://ipv64.net/api.php?get_domains", headers=headers)
 if response.status_code != 200:
     exit("API Key not valid")
+ 
 
 x = PrettyTable()
 search_entry(json.loads(response.text))
