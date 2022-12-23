@@ -23,7 +23,7 @@ docker run -d \
   -e TZ=Europe/Berlin \
   -e DOMAIN_API=123456787654321234567876543 \
   -e TABELLE_BREITE=30 \
-  --name ddns-ipv64-api-webgui
+  --name ddns-ipv64-api-webgui \
   --restart=always \
   alcapone1933/ddns-ipv64-api-webgui:latest
 ```

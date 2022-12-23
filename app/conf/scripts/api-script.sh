@@ -74,12 +74,12 @@ cmd_add_record_praefix() {
 }
 cmd_get_domains_record_id-info() {
     DOMAIN_API="$DOMAIN_API"
-    DOMAIN_IPV64="$DOMAIN_IPV64"
+    export DOMAIN_IPV64="$DOMAIN_IPV64"
     if [ -z "$DOMAIN_API" ]; then
         echo "Error: Not enough arguments"
         exit 1
     fi
-    /app/conf/scripts/record-id-info.py ${DOMAIN_API} ${DOMAIN_IPV64}
+    /app/conf/scripts/record-id-info.py
 }
 cmd_del_record() {
     DOMAIN_API="$DOMAIN_API"
