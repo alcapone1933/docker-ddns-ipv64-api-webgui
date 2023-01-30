@@ -13,7 +13,7 @@ services:
       - DOMAIN_API=123456787654321234567876543
       # - DOMAIN_KEY=1234567890abcdefghijklmn
       # - DOMAIN_IPV64=deine-domain.ipv64.net
-      - TABELLE_BREITE=30
+      - TABELLE_BREITE=40
     volumes:
       - ./app/conf/conf.json:/app/conf/conf.json
       # - ./app/conf/runners/:/app/conf/runners

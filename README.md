@@ -22,7 +22,7 @@ docker run -d \
   -p 5000:5000 \
   -e TZ=Europe/Berlin \
   -e DOMAIN_API=123456787654321234567876543 \
-  -e TABELLE_BREITE=30 \
+  -e TABELLE_BREITE=40 \
   --name ddns-ipv64-api-webgui \
   --restart=always \
   alcapone1933/ddns-ipv64-api-webgui:latest
@@ -42,7 +42,7 @@ services:
     environment:
       - TZ=Europe/Berlin
       - DOMAIN_API=123456787654321234567876543
-      - TABELLE_BREITE=30
+      - TABELLE_BREITE=40
 ```
 ## Docs
 ### [DynDNS API IPV64.NET Vorlage](docs/api-ipv64-net.md)
@@ -78,4 +78,4 @@ services:
 | ------------------------------------------------------------------------------- | -------------- | ------------- | --------------------------- |
 | Zeitzone                                                                        | TZ             | Europe/Berlin | Europe/Berlin               |
 | DOMAIN API: Dein DOMAIN API zu fiden unter https://ipv64.net/dyndns.php         | DOMAIN_API     | ------------- | 123456787654321234567876543 |
-| TABELLE BREITE: Tabellen Breite für die Ausgabe  **get_domains_record_id-info** | TABELLE_BREITE | 30            | 30                          |
+| TABELLE BREITE: Tabellen Breite für die Ausgabe  **get_domains_record_id-info** | TABELLE_BREITE | 40            | 40                          |
