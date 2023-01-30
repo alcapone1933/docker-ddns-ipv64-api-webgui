@@ -19,7 +19,7 @@ def build_table(ent, key, subdomain):
                             for record in ent[key][subdomain]['records']:
                                 if record['record_id'] != '':
                                     #Hier Code
-                                    x.add_row([subdomain, record['type'], record['praefix'], record['content'], record['ttl'], record['last_update'], record['record_id']])
+                                    x.add_row([record['record_id'], record['praefix'], subdomain, record['ttl'], record['type'], record['content'], record['last_update'], record['record_key']])
 
 
 def search_entry(ent):
@@ -27,7 +27,7 @@ def search_entry(ent):
         if key == 'subdomains':
             if search == '':
                 for subdomain in ent[key].keys():
-                    x.field_names =  ['Domain', 'Type', 'Praefix', 'Content', 'TTL', 'Last Update', 'Record ID']
+                    x.field_names =  ['Record ID', 'Praefix', 'Domain', 'TTL', 'Type', 'Content', 'Last Update', 'Record KEY']
                     build_table(ent, key, subdomain)
                 x.max_width = int(breite)
                 x.sortby = 'Domain'
@@ -36,7 +36,7 @@ def search_entry(ent):
                 if search in ent[key].keys():
                     for subdomain in ent[key].keys():
                         if subdomain == search:
-                            x.field_names =  ['Domain', 'Type', 'Praefix', 'Content', 'TTL', 'Last Update', 'Record ID']
+                            x.field_names =  ['Record ID', 'Praefix', 'Domain', 'TTL', 'Type', 'Content', 'Last Update', 'Record KEY']
                             build_table(ent, key, subdomain)
                             print(x)
                             exit()
@@ -52,7 +52,7 @@ agent = os.getenv('CURL_USER_AGENT')
 if agent == '':
     agent = './𝕾𝖊𝖗𝖕𝖊𝖓𝖘𝖎𝖓.𝖘𝖍#0007 on Discord. Github: https://github.com/Serpensin'
 if breite is None:
-    breite = 30
+    breite = 40
 
 headers = {
   'Authorization': f'Bearer {api_key}',

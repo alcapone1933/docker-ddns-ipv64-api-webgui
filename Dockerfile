@@ -13,7 +13,7 @@ ENV VERSION="v0.0.5" \
     CURL_USER_AGENT="docker-ddns-ipv64-api-webgui/version=$VERSION github.com/alcapone1933/docker-ddns-ipv64-api-webgui" \
     DOMAIN_KEY="1234567890abcdefghijklmn" \
     DOMAIN_API="123456787654321234567876543" \
-    TABELLE_BREITE="30"
+    TABELLE_BREITE="40"
 #   DOMAIN_IPV64=deine-domain.ipv64.net
 
 COPY app /app
