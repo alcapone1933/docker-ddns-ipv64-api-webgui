@@ -20,6 +20,7 @@ COPY app /app
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 RUN apk add --update --no-cache iputils tzdata curl bash tini bind-tools jq nano && \
+    pip install --break-system-packages -r /app/requirements.txt && \
     rm -rf /var/cache/apk/* && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # pip install prettytable requests python-dotenv
